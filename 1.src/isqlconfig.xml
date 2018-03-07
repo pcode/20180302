@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--平台的数据库连接参数单元-->
+    <dataSource name="mysql_conn">
+        <property name = "dbn"        value = "mysql"/>
+        <property name = "host"       value = "120.27.193.253"/>
+        <property name = "user"       value = "root"/>
+        <property name = "port"       value = "33060" />
+        <property name = "pw"         value = "Aopinjie2015"/>
+        <property name = "db"         value = "lutra_sems"/>
+    </dataSource>
+</configuration>

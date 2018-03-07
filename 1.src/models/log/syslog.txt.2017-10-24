@@ -1,0 +1,1978 @@
+2017-10-24 08:45:18,341 ERROR iSQL执行_getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\isql.py", line 96, in _getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+2017-10-24 08:45:18,349 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\isql.py", line 38, in __init__
+    self._getSQLs()
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\isql.py", line 103, in _getSQLs
+    raise Exception,msg
+Exception: iSQL执行_getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\isql.py", line 96, in _getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+iSQL执行_getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\isql.py", line 96, in _getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+2017-10-24 12:13:39,232 ERROR iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:/projecting/yl_sqlmap/2.SRC\iLibP2\isql.py", line 76, in __getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+2017-10-24 12:13:39,234 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "E:/projecting/yl_sqlmap/2.SRC\iLibP2\isql.py", line 41, in __init__
+    self.__getSQLs()
+  File "E:/projecting/yl_sqlmap/2.SRC\iLibP2\isql.py", line 83, in __getSQLs
+    raise Exception,msg
+Exception: iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:/projecting/yl_sqlmap/2.SRC\iLibP2\isql.py", line 76, in __getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:/projecting/yl_sqlmap/2.SRC\iLibP2\isql.py", line 76, in __getSQLs
+    mp_root = ET.parse(mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'iLibP/ipdb.xml'
+2017-10-24 14:48:41,154 ERROR iLib执行GetRowsByDbWhere函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 106, in GetRowsByDbWhere
+    recs=self.db.select(self.table_name,**where_args)
+  File "C:\Python27\lib\site-packages\web\db.py", line 705, in select
+    return self.query(qout, processed=True)
+  File "C:\Python27\lib\site-packages\web\db.py", line 665, in query
+    self._db_execute(db_cursor, sql_query)
+  File "C:\Python27\lib\site-packages\web\db.py", line 596, in _db_execute
+    out = cur.execute(query, params)
+  File "C:\Python27\lib\site-packages\DBUtils\SteadyDB.py", line 580, in tough_method
+    result = method(*args, **kwargs)  # try to execute
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'yl_jm.d_vars' doesn't exist")
+,
+[参数]:
+{'limit': 10}
+[数据]:
+(1146, "Table 'yl_jm.d_vars' doesn't exist")
+2017-10-24 14:58:31,473 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,494 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,515 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,535 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,555 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,575 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,595 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,612 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,631 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,651 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,668 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,687 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,707 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,723 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,742 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,760 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,779 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,796 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,813 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,832 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,848 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,868 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,888 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,905 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,923 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,940 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,957 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,974 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:31,993 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,009 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,026 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,045 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,062 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,078 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,096 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,115 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,131 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,148 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,164 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,180 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,197 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,217 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,234 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,252 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,269 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,286 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,302 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,323 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,342 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,359 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,378 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,395 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,415 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,433 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,453 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,471 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,490 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,506 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,530 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,549 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,568 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,585 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,601 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,619 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,638 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,657 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,677 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,694 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,713 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,733 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,750 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,766 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,786 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,803 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,821 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,839 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,861 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,880 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,898 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,915 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,936 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,956 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,973 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:32,992 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,010 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,029 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,048 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,065 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,085 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,104 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,121 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,141 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,157 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,176 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,193 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,210 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,230 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,250 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,273 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:58:33,292 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,198 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,221 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,247 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,276 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,308 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,335 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,362 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,387 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,411 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,433 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,453 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,474 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,500 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,526 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,549 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,572 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,598 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,621 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,644 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,667 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,694 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,723 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,746 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,769 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,798 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,821 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,844 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,867 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,895 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,921 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,950 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:34,976 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,003 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,026 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,051 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,073 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,101 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,128 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,154 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,180 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,207 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,232 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,253 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,279 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,308 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,331 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,358 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,385 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,413 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,437 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,460 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,483 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,509 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,536 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,562 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,586 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,612 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,637 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,658 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,681 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,709 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,734 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,762 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,788 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,813 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,838 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,862 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,884 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,911 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,937 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,960 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:35,983 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,009 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,032 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,055 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,078 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,101 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,125 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,147 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,177 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,203 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,227 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,252 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,273 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,296 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,319 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,342 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,365 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,388 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,411 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,434 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,457 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,480 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,502 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,523 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,546 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,573 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,599 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,627 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 14:59:36,657 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 15:00:35,052 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 15:01:37,530 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 168, in Save
+    objn=__Filter(obj)                                     #过滤掉传入对象中与数据无关的属性,再用于操作数据
+TypeError: __Filter() takes exactly 2 arguments (1 given)
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+__Filter() takes exactly 2 arguments (1 given)
+2017-10-24 15:04:46,881 ERROR iLib执行Save函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 153, in Save
+    for key in self.fields.keys():
+AttributeError: 'list' object has no attribute 'keys'
+,
+[参数]:
+<Storage {'date': '20171024', 'type': 'BANK', 'id': 0, 'no': 0}>
+[数据]:
+'list' object has no attribute 'keys'
+2017-10-24 15:14:32,072 ERROR iLib执行DelRowsByDbWhere函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 119, in DelRowsByDbWhere
+    i=self.db.delete(self.table_name,**whereargs)
+  File "C:\Python27\lib\site-packages\web\db.py", line 933, in delete
+    self._db_execute(db_cursor, q)
+  File "C:\Python27\lib\site-packages\web\db.py", line 596, in _db_execute
+    out = cur.execute(query, params)
+  File "C:\Python27\lib\site-packages\DBUtils\SteadyDB.py", line 580, in tough_method
+    result = method(*args, **kwargs)  # try to execute
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'%'' at line 1")
+,
+[参数]:
+(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0'%'' at line 1")
+2017-10-24 15:15:23,904 ERROR iLib执行DelRowsByDbWhere函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 119, in DelRowsByDbWhere
+    i=self.db.delete(self.table_name,**whereargs)
+  File "C:\Python27\lib\site-packages\web\db.py", line 933, in delete
+    self._db_execute(db_cursor, q)
+  File "C:\Python27\lib\site-packages\web\db.py", line 596, in _db_execute
+    out = cur.execute(query, params)
+  File "C:\Python27\lib\site-packages\DBUtils\SteadyDB.py", line 580, in tough_method
+    result = method(*args, **kwargs)  # try to execute
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1")
+,
+[参数]:
+(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1")
+2017-10-24 15:15:30,799 ERROR iLib执行DelRowsByDbWhere函数出错,[具体信息]:Traceback (most recent call last):
+  File "E:\projecting\yl_sqlmap\2.SRC\iLibP2\dalbase.py", line 119, in DelRowsByDbWhere
+    i=self.db.delete(self.table_name,**whereargs)
+  File "C:\Python27\lib\site-packages\web\db.py", line 933, in delete
+    self._db_execute(db_cursor, q)
+  File "C:\Python27\lib\site-packages\web\db.py", line 596, in _db_execute
+    out = cur.execute(query, params)
+  File "C:\Python27\lib\site-packages\DBUtils\SteadyDB.py", line 580, in tough_method
+    result = method(*args, **kwargs)  # try to execute
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1")
+,
+[参数]:
+(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%' at line 1")
+2017-10-24 15:29:22,043 INFO 系统用户ID85被成功停用
+2017-10-24 15:29:36,936 INFO 系统用户ID85被成功停用
+2017-10-24 15:29:36,977 INFO 系统用户ID85被成功启用
+2017-10-24 15:29:52,655 INFO 系统用户ID85被成功停用
+2017-10-24 15:29:52,698 INFO 系统用户ID85被成功启用
+2017-10-24 15:31:36,956 INFO 系统用户ID85被成功停用
+2017-10-24 15:31:37,002 INFO 系统用户ID85被成功启用

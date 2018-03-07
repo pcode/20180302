@@ -1,0 +1,30 @@
+<script>
+function doSubmit(){
+    $("#upload").submit();
+}
+</script>
+<div id="importDiv" style="display: none">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>导入</h5>
+        </div>
+        <div class="ibox-content ">
+            <form id="upload" name="upload" action='<%block name="form_action_url"/>' enctype="multipart/form-data" method="post" class="form-horizontal">
+                <input type="hidden" name="act" value="import"/>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-8">
+                    请选择数据文件：<input id="excel" name="excel" type="file" class="form-control">
+                    </div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary" type="button" onclick="doSubmit()">确定</button>
+                        <button class="btn btn-danger optbtn" type="button" rel-cmd="clear">关闭</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

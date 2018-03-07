@@ -1,0 +1,88 @@
+2018-03-07 13:10:02,168 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:11:40,707 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:12:23,015 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:12:59,631 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:13:02,506 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:14:36,349 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:21:52,157 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+0
+[数据]:
+0
+2018-03-07 13:24:26,418 ERROR iLib执行GetRowById函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/lx_room/1.src\iLibP2\dalbase.py", line 62, in GetRowById
+    return recs[0]
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\utils.py", line 684, in __getitem__
+    raise IndexError, str(i)
+IndexError: 0
+,
+[参数]:
+8
+[数据]:
+0

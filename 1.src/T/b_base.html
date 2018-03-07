@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <meta name="description" content="powered by youliaoo.com pcode@qq.com">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" >
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/bootstrap-table/bootstrap-table.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.css" >
+        <link rel="stylesheet" type="text/css" href="/static/css/plugins/iCheck/custom.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/plugins/iCheck/custom.css"/>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/bootstrap/bootstrap-table/bootstrap-table.min.js"></script>
+        <script src="/static/bootstrap/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+        <script src="/static/js/jquery.serializejson.min.js"></script>
+        <script src="/static/js/plugins/iCheck/icheck.min.js"></script>
+        <script src="/static/js/plugins/layer/layer.min.js"></script>
+        <script src="/static/js/laydate/laydate.js"></script>
+        <%block name="the_script"/>
+        <script>
+
+               //操作区域render，显示三个图标
+            function Formatter1(value, row, index) {
+                    return '<a href="javascript:;" onclick="dodel('+value+')">删除</a>';
+            }
+            function dodel(id){
+                $.post(page_args.url,{"cmd":"del","id":id},function(r){
+                    if (r.result=="OK"){
+                        dosearch()
+                    }
+                },"json")
+            }
+            function closemodal(){
+                $(".modal").modal('hide');
+            }
+            function dosearch(){
+                closemodal();
+                $(page_args.datatable).bootstrapTable('refresh', {query:$(page_args.searchform).serializeJSON()});
+            }
+            function doadd(){
+                closemodal()
+            }
+            /**
+             * 导出函数
+             */
+            function doexport(){
+                var args = $(page_args.searchform).serializeJSON();
+                args.cmd = "export";
+                layer.load(0,{shade: [0.3,'#000']}); //0代表加载的风格，支持0-2
+                $.post(page_args.url,args,function(r){
+                    if (r.result=="OK") {
+                        window.location.href = r.filename;
+                    }else {alert("导出数据失败,请稍后再试！");}
+                    layer.closeAll();
+                },'json')
+            }
+            $(function(){
+                $('#the_data').bootstrapTable({
+                    queryParams     : function(params){
+                                        op = params;
+                                        params = $(page_args.searchform).serializeJSON();
+                                        params.pageindex = op.offset / op.limit+1;
+                                        params.pagesize = op.limit;
+                                        return params;},
+                    toolbar         : "#toolbar",
+                    showColumns     : true,
+                    striped         : true,
+                    url             : page_args.url,
+                    sidePagination  : "server",
+                    pagination      : "true",
+                    pageSize        : 20,
+                    pageList        : [20, 50, 100, 500],
+                    uniqueId        : "id"
+            });
+//                $(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green"});
+            });
+
+        </script>
+    </head>
+    <body class="container-fluid" style="padding: 10px;">
+        <%block name="the_body"/>
+    </body>
+
+</html>

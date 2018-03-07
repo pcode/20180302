@@ -1,0 +1,25 @@
+<div id="dataDiv" style="display: none">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>参数信息</h5>
+        </div>
+        <div class="ibox-content ">
+            <form id="rowData" class="form-horizontal">
+                <input type="hidden" v-model="row.the_id" name="the_id" id="the_id" value="0">
+                <input type="hidden" v-model="row.cmd" name="cmd" id="cmd" value="add">
+                <%block name="data_body">
+                </%block>
+                <div class="form-group">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <button class="btn btn-primary optbtn" type="button" rel-cmd="save">确定</button>
+                        <button class="btn btn-danger optbtn" type="button" rel-cmd="clear">取消</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+    <!-- Meta -->
+    <meta name="description" content="云联数字商业服务系统 MarketingOS">
+    <meta name="author" content="pcode@qq.com">
+    <title>云联数字商业服务系统 MarketingOS V1.2</title>
+    <!-- vendor css -->
+    <link href="/static/k/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/k/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="/static/k/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="/static/k/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
+    <link href="/static/k/lib/datatables/jquery.dataTables.css" rel="stylesheet">
+    <!-- Katniss CSS -->
+    <link rel="stylesheet" href="/static/k/css/katniss.css">
+      <style>
+          .select2-container--open{
+            z-index:9999999
+            }
+          .dataTables_paginate{
+              margin-right: 40px;
+          }
+          .dataTables_info{
+              margin-left: 30px;
+          }
+          td {
+                padding: 5px;
+            }
+      </style>
+  </head>
+  <body>
+      <div class="kt-pagebody">
+        <div class="row row-sm">
+          <div class="col-lg-8">
+            <div class="row row-sm">
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body pd-b-0">
+                    <h6 class="card-body-title tx-12 tx-spacing-2 mg-b-20 tx-success">总体销售业绩</h6>
+                    <h2 class="tx-lato tx-inverse">323,360</h2>
+                    <p class="tx-12"><span class="tx-success">2.5%</span> 统计截止2017-12-22</p>
+                  </div><!-- card-body -->
+                  <div id="rs1" class="ht-50 ht-sm-70 mg-r--1"></div>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body pd-b-0">
+                    <h6 class="card-body-title tx-12 tx-spacing-2 mg-b-20 tx-danger">总体执行金额</h6>
+                    <h2 class="tx-lato tx-inverse">674,221</h2>
+                    <p class="tx-12"><span class="tx-success">2.5%</span>统计截止2017-12-22</p>
+                  </div><!-- card-body -->
+                  <div id="rs2" class="ht-50 ht-sm-70 mg-r--1"></div>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="card pd-20 pd-sm-40 mg-t-20">
+              <h6 class="card-body-title">月度结算统计</h6>
+              <p class="mg-b-20 mg-sm-b-30">本年度按月度结算金额的统计汇总情况</p>
+              <canvas id="chartBar4" height="380"></canvas>
+            </div><!-- card -->
+
+            <div class="row row-sm mg-t-20">
+              <div class="col-lg-6">
+                <div class="card pd-20">
+                  <h6 class="tx-12 tx-uppercase tx-info tx-bold mg-b-15">销售报告</h6>
+                  <div class="d-flex mg-b-10">
+                    <div class="bd-r pd-r-10">
+                      <label class="tx-12">今日</label>
+                      <p class="tx-lato tx-inverse tx-bold">1,898</p>
+                    </div>
+                    <div class="bd-r pd-x-10">
+                      <label class="tx-12">本周</label>
+                      <p class="tx-lato tx-inverse tx-bold">32,112</p>
+                    </div>
+                    <div class="pd-l-10">
+                      <label class="tx-12">本月</label>
+                      <p class="tx-lato tx-inverse tx-bold">72,067</p>
+                    </div>
+                  </div><!-- d-flex -->
+                  <div class="progress mg-b-10">
+                    <div class="progress-bar bg-info wd-50p" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  </div>
+                  <p class="tx-12 mg-b-0">本月最佳渠道《渠道12》累计成交2011212</p>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+              <div class="col-lg-6 mg-t-20 mg-lg-t-0">
+                <div class="card pd-20">
+                  <h6 class="tx-12 tx-uppercase tx-danger tx-bold mg-b-15">结算报告</h6>
+                  <div class="d-flex mg-b-10">
+                    <div class="bd-r pd-r-10">
+                      <label class="tx-12">今日</label>
+                      <p class="tx-lato tx-inverse tx-bold">1,898</p>
+                    </div>
+                    <div class="bd-r pd-x-10">
+                      <label class="tx-12">本周</label>
+                      <p class="tx-lato tx-inverse tx-bold">32,112</p>
+                    </div>
+                    <div class="pd-l-10">
+                      <label class="tx-12">本月</label>
+                      <p class="tx-lato tx-inverse tx-bold">72,067</p>
+                    </div>
+                  </div><!-- d-flex -->
+                  <div class="progress mg-b-10">
+                    <div class="progress-bar bg-danger wd-50p" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  </div>
+                  <p class="tx-12 mg-b-0">最佳结算客户《客户12》结算金额123123123</p>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+            </div><!-- row -->
+
+          </div><!-- col-8 -->
+          <div class="col-lg-4">
+            <div class="card pd-40 tx-center">
+              <div class="d-flex justify-content-center mg-b-30">
+                <img src="/static/k/img/img11.jpg" style="max-height: 100px;" alt="">
+              </div>
+              <h6 class="tx-md-20 tx-inverse mg-b-20">系统公告</h6>
+              <p class="tx-13">公告内容如下。系统上线功能请反馈</p>
+              <a href="" class="btn btn-default btn-block">BUG提交</a>
+            </div><!-- card -->
+
+            <div class="card mg-t-20">
+              <div class="card-header d-flex justify-content-between">
+                <span class="tx-uppercase tx-12 tx-medium tx-inverse">最近消息</span>
+                <a href="" class="tx-gray-600"><i class="icon ion-more"></i></a>
+              </div><!-- card-header -->
+              <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                  <div class="media">
+                    <img src="/static/k/img/img1.jpg" class="wd-30 rounded-circle" alt="">
+                    <div class="media-body mg-l-10">
+                      <h6 class="mg-b-0 tx-inverse tx-13">系统管理员</h6>
+                      <p class="mg-b-0 tx-gray-500 tx-12">三天前</p>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <p class="mg-t-10 mg-b-0 tx-13">系统上线运行期间如果故障请反馈至Pcode@qq.com</p>
+                </div><!-- list-group-item -->
+                <div class="list-group-item">
+                  <div class="media">
+                    <img src="/static/k/img/img2.jpg" class="wd-30 rounded-circle" alt="">
+                    <div class="media-body mg-l-10">
+                      <h6 class="mg-b-0 tx-inverse tx-13">渠道12</h6>
+                      <p class="mg-b-0 tx-gray-500 tx-12">2 小时前</p>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <p class="mg-t-10 mg-b-0 tx-13">这个平台很好，我给点赞</p>
+                </div><!-- list-group-item -->
+                <div class="list-group-item">
+                  <div class="media">
+                    <img src="/static/k/img/img4.jpg" class="wd-30 rounded-circle" alt="">
+                    <div class="media-body mg-l-10">
+                      <h6 class="mg-b-0 tx-inverse tx-13">客户1</h6>
+                      <p class="mg-b-0 tx-gray-500 tx-12">3天前</p>
+                    </div><!-- media-body -->
+                  </div><!-- media -->
+                  <p class="mg-t-10 mg-b-0 tx-13">电视广告的CPM如何比较，请指教</p>
+                </div><!-- list-group-item -->
+              </div><!-- list-group -->
+              <div class="card-footer">
+                <a href="" class="tx-12"><i class="fa fa-angle-down mg-r-5"></i>显示更多</a>
+              </div><!-- card-footer -->
+            </div><!-- card -->
+
+            <div class="card card-body pd-20 mg-t-20">
+              <h6 class="card-body-title tx-12 tx-spacing-1">常用联系信息</h6>
+              <p>平台管理人员联系方式</p>
+              <div class="tx-20">
+                pcode@qq.com
+              </div>
+            </div><!-- card -->
+
+          </div><!-- col-4 -->
+        </div><!-- row -->
+      </div><!-- kt-pagebody -->
+      
+      <div class="kt-footer">
+        <span>Copyright &copy;. All Rights Reserved. 云联数字商业</span>
+        <span>Powered by:youliaoo.com</span>
+      </div><!-- kt-footer -->
+    <script src="/static/k/lib/jquery/jquery.js"></script>
+    <script src="/static/k/js/vue.min.js"></script>
+    <script src="/static/k/lib/popper.js/popper.js"></script>
+    <script src="/static/k/lib/bootstrap/bootstrap.js"></script>
+    <script src="/static/k/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="/static/k/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+    <script src="/static/k/lib/moment/moment.js"></script>
+    <script src="/static/k/lib/d3/d3.js"></script>
+    <script src="/static/k/lib/rickshaw/rickshaw.min.js"></script>
+    <script src="/static/k/lib/chart.js/Chart.js"></script>
+    <script src="/static/k/js/katniss.js"></script>
+    <script src="/static/k/js/ResizeSensor.js"></script>
+    <script src="/static/k/js/dashboard.js"></script>
+    <script src="/static/k/js/jquery.pjax.js"></script>
+    <script src="/static/k/lib/select2/js/select2.min.js"></script>
+    <script src="/static/k/lib/spectrum/spectrum.js"></script>
+    <script src="/static/k/lib/highlightjs/highlight.pack.js"></script>
+    <script src="/static/k/lib/datatables/jquery.dataTables.js"></script>
+  </body>
+</html>

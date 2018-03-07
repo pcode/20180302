@@ -1,0 +1,99 @@
+<%inherit file="/T/b_base.html"/>
+<%block name="the_script">
+<script>
+     /**
+     * 查询参数获取
+     * @param params
+     * @returns {*|jQuery}
+     */
+    function queryParams(params){
+        op = params;
+        params = $("#dataform").serializeJSON();
+        params.pageindex = op.offset / op.limit+1;
+        params.pagesize = op.limit;
+        return params;
+    }
+    var show_args={
+            queryParams     : queryParams,
+            toolbar         : "#toolbar",
+            showColumns     : true,
+            striped         : true,
+            url             : "/F2013/ajax",
+            sidePagination  : "server",
+            pagination      : "true",
+            pageSize        : 20,
+            pageList        : [20, 50, 100, 500],
+            uniqueId        : "id"
+    };
+       //操作区域render，显示三个图标
+    function Formatter1(value, row, index) {
+        if(row.filelocation=="L"){
+            return '<a href="/static/uploads/'+row.src_name+"/" + row.paintfile + '" title="查看作品" target="_blank">查看作品</a>';
+        }else {
+            return '<a href="' + row.paintfile + '" title="查看作品" target="_blank">查看作品</a>';
+        }
+    }
+    function closesearch(){
+        $("#myModal").modal('hide');
+    }
+    function dosearch(){
+        closesearch();
+        $('#the_data').bootstrapTable('refresh', {query:$("#dataform").serializeJSON()});
+
+    }
+    /**
+     * 页面初始化
+     */
+    $(function(){
+        $(document).ready(function(){
+            $(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green"});
+            laydate({elem:"#start",format:"YYYY-MM-DD"});
+            laydate({elem:"#end",format:"YYYY-MM-DD"});
+        });
+        //初始化数据表
+       $('#the_data').bootstrapTable(show_args);
+        //导出按钮
+        $("#btn_export").click(function(){
+            var args = $("#dataform").serializeJSON();
+            layer.load(0,{shade: [0.3,'#000']}); //0代表加载的风格，支持0-2
+            $.get('/F2014',args,function(r){
+                if (r.result) {
+                    window.location.href = r.filename;
+                }else {alert("导出数据失败,请稍后再试！");}
+                layer.closeAll();
+            },'json')
+        });
+        //初始化结束
+    });
+</script>
+</%block>
+<%block name="the_body">
+<!--查询结果-->
+<div id="toolbar" class="btn-group">
+    <button id="btn_search1" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-right: 5px;">
+        <span class="glyphicon glyphicon-search" ></span>查询
+    </button>
+
+    <button id="btn_export" class="btn btn-primary">
+        <span class="glyphicon glyphicon-export"></span>导出
+    </button>
+</div>
+<%include file="search.html"/>
+<!--数据主体显示-->
+<table id="the_data"class="ta" style="margin-bottom: 15px;">
+    <thead>
+    <tr>
+        <th data-field="phoneno"                data-title="电话号码"></th>
+        <th data-field="truename"               data-title="姓名"></th>
+        <th data-field="birthday"               data-title="出生日期"></th>
+        <th data-field="classname"              data-title="级别"></th>
+        <th data-field="orgname"                data-title="机构名称"></th>
+        <th data-field="src_cnname"             data-title="数据来源"></th>
+        <th data-field="scorevalue"             data-title="评分值"></th>
+        <th data-field="scoreuser"              data-title="评分者"></th>
+        <th data-field="scoretime"              data-title="评分时间"></th>
+        <th data-title="操作"                    data-formatter=Formatter1 ></th>
+    </tr>
+    </thead>
+</table>
+</%block>

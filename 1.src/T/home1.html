@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Morris -->
+    <link href="/static/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <!-- Gritter -->
+    <link href="/static/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/style.min.css" rel="stylesheet">
+    <link href="/static/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right">月</span>
+                    <h5>收入</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">40 886,200</h1>
+                    <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i>
+                    </div>
+                    <small>总收入</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">全年</span>
+                    <h5>订单</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">275,800</h1>
+                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i>
+                    </div>
+                    <small>新订单</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-primary pull-right">今天</span>
+                    <h5>访客</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">106,120</h1>
+                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i>
+                    </div>
+                    <small>新访客</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-danger pull-right">最近一个月</span>
+                    <h5>活跃用户</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">80,600</h1>
+                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i>
+                    </div>
+                    <small>12月</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>订单</h5>
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-xs btn-white active">天</button>
+                            <button type="button" class="btn btn-xs btn-white">月</button>
+                            <button type="button" class="btn btn-xs btn-white">年</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul class="stat-list">
+                                <li>
+                                    <h2 class="no-margins">2,346</h2>
+                                    <small>订单总数</small>
+                                    <div class="stat-percent">48% <i class="fa fa-level-up text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">4,422</h2>
+                                    <small>最近一个月订单</small>
+                                    <div class="stat-percent">60% <i class="fa fa-level-down text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 60%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h2 class="no-margins ">9,180</h2>
+                                    <small>最近一个月销售额</small>
+                                    <div class="stat-percent">22% <i class="fa fa-bolt text-navy"></i>
+                                    </div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar"></div>
+                                    </div>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>消息</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content ibox-heading">
+                    <h3><i class="fa fa-envelope-o"></i> 新消息</h3>
+                    <small><i class="fa fa-tim"></i> 您有22条未读消息</small>
+                </div>
+                <div class="ibox-content">
+                    <div class="feed-activity-list">
+
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right text-navy">1月前</small>
+                                <strong>商务 王叶甜</strong>
+                                <div>
+                                    审核订单，不能继续，请经理授权。
+                                </div>
+                                <small class="text-muted">4月11日 00:00</small>
+                            </div>
+                        </div>
+
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">2月前</small>
+                                <strong>商务 马伯庸 </strong>
+                                <div>线下订单还未传真，可否提前审核，请回复</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">5月前</small>
+                                <strong>商务 刘晨 </strong>
+                                <div>帮客户创建了一个订单，但是没选择排除日期，请指教。</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">5月前</small>
+                                <strong>商务 刘晨</strong>
+                                <div>哈哈哈哈 搞定一笔，大家都来看我的！</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+
+
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">5月前</small>
+                                <strong>商务 叶甜</strong>
+                                <div>系统培训，测试消息，订单消息。</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">5月前</small>
+                                <strong>商务 马伯庸 </strong>
+                                <div>平台测试消息，订单消息！</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+                        <div class="feed-element">
+                            <div>
+                                <small class="pull-right">5月前</small>
+                                <strong>商务 刘晨</strong>
+                                <div>协作测试订单流程，通过消息。</div>
+                                <small class="text-muted">11月8日 20:08</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>用户项目列表</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <table class="table table-hover no-margins">
+                                <thead>
+                                <tr>
+                                    <th>状态</th>
+                                    <th>日期</th>
+                                    <th>用户</th>
+                                    <th>值</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <small>进行中...</small>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 11:20</td>
+                                    <td>青衣5858</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 24%</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-warning">已取消</span>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 10:40</td>
+                                    <td>徐子崴</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 66%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>进行中...</small>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 01:30</td>
+                                    <td>姜岚昕</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 54%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>进行中...</small>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 02:20</td>
+                                    <td>武汉大兵哥</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 12%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>进行中...</small>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 09:40</td>
+                                    <td>荆莹儿</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 22%</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-primary">已完成</span>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 04:10</td>
+                                    <td>栾某某</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 66%</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <small>进行中...</small>
+                                    </td>
+                                    <td><i class="fa fa-clock-o"></i> 12:08</td>
+                                    <td>范范范二妮</td>
+                                    <td class="text-navy"><i class="fa fa-level-up"></i> 23%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>任务列表</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <ul class="todo-list m-t small-list ui-sortable">
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                    <span class="m-l-xs todo-completed">开会</span>
+
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-check-square"></i> </a>
+                                    <span class="m-l-xs  todo-completed">项目开发</span>
+
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">修改bug</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1小时</small>
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">修改bug</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1小时</small>
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">修改bug</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1小时</small>
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">修改bug</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1小时</small>
+                                </li>
+                                <li>
+                                    <a href="widgets.html#" class="check-link"><i class="fa fa-square-o"></i> </a>
+                                    <span class="m-l-xs">修改bug</span>
+                                    <small class="label label-primary"><i class="fa fa-clock-o"></i> 1小时</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>交易地区</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <table class="table table-hover margin bottom">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 1%" class="text-center">序号</th>
+                                            <th>交易</th>
+                                            <th class="text-center">日期</th>
+                                            <th class="text-center">销售额</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td>DSP
+                                            </td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-primary">&yen;483.00</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td>WIFI
+                                            </td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-primary">&yen;327.00</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3</td>
+                                            <td>百度
+                                            </td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-warning">&yen;125.00</span>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">4</td>
+                                            <td>微信</td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-primary">&yen;344.00</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5</td>
+                                            <td>广点通</td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-primary">&yen;235.00</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">6</td>
+                                            <td>微博</td>
+                                            <td class="text-center small">2014.9.15</td>
+                                            <td class="text-center"><span class="label label-primary">&yen;100.00</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div id="world-map" style="height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/jquery.min.js?v=2.1.4"></script>
+<script src="/static/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/static/js/plugins/flot/jquery.flot.js"></script>
+<script src="/static/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="/static/js/plugins/flot/jquery.flot.spline.js"></script>
+<script src="/static/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="/static/js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="/static/js/plugins/flot/jquery.flot.symbol.js"></script>
+<script src="/static/js/plugins/peity/jquery.peity.min.js"></script>
+<script src="/static/js/home/peity_home.min.js"></script>
+<script src="/static/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/static/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="/static/jvectormap/jquery-jvectormap-cn-mill.js"></script>
+<script src="/static/js/plugins/easypiechart/jquery.easypiechart.js"></script>
+<script src="/static/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="/static/js/home/sparklinehome.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".chart").easyPieChart({barColor: "#f8ac59", scaleLength: 5, lineWidth: 4, size: 80});
+        $(".chart2").easyPieChart({barColor: "#1c84c6", scaleLength: 5, lineWidth: 4, size: 80});
+        var data2 = [
+            ${i.data1}
+        ];
+        var data3 = [
+            ${i.data2}
+            ];
+        var dataset = [{
+            label: "订单数",
+            data: data3,
+            color: "#1ab394",
+            bars: {show: true, align: "center", barWidth: 24 * 60 * 60 * 600, lineWidth: 0}
+        }, {
+            label: "付款数",
+            data: data2,
+            yaxis: 2,
+            color: "#464f88",
+            lines: {lineWidth: 1, show: true, fill: true, fillColor: {colors: [{opacity: 0.2}, {opacity: 0.2}]}},
+            splines: {show: false, tension: 0.6, lineWidth: 1, fill: 0.1},
+        }];
+        var options = {
+            xaxis: {
+                mode: "time",
+                tickSize: [1, "day"],
+                tickLength: 0,
+                axisLabel: "Date",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: "Arial",
+                axisLabelPadding: 10,
+                color: "#838383"
+            },
+            yaxes: [{
+                position: "left",
+                max: 1070,
+                color: "#838383",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: "Arial",
+                axisLabelPadding: 3
+            }, {
+                position: "right",
+                clolor: "#838383",
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: " Arial",
+                axisLabelPadding: 67
+            }],
+            legend: {noColumns: 1, labelBoxBorderColor: "#000000", position: "nw"},
+            grid: {hoverable: true, borderWidth: 0, color: "#838383"}
+        };
+
+        function gd(year, month, day) {
+            return new Date(year, month - 1, day).getTime()
+        }
+
+        var previousPoint = null, previousLabel = null;
+        $.plot($("#flot-dashboard-chart"), dataset, options);
+        $("#flot-dashboard-chart").bind("plothover", function (event, pos, item) {
+				if (item) {
+				    //data2是付款数据，data3是订单数据
+				    var fk = data2[item.dataIndex][1];
+                    var dd = data3[item.dataIndex][1];
+                     $("#tooltip").html(item.series.xaxis.ticks[item.dataIndex+1].label + "<br/>订单数:"+dd+"<br/>付款数:" + fk)
+                         .css({top: item.pageY+5, left: item.pageX+5})
+                         .fadeIn(200);
+
+				} else {
+					$("#tooltip").hide();
+				}
+		});
+        /**
+1	CN-32	Jiangsu
+2	CN-52	Guizhou
+3	CN-53	Yunnan
+4	CN-50	Chongqing
+5	CN-51	Sichuan
+6	CN-31	Shanghai
+7	CN-54	Xizang
+8	CN-33	Zhejiang
+9	CN-15	Inner Mongol
+10	CN-14	Shanxi
+11	CN-	Fujian
+12	CN-12	Tianjin
+13	CN-13	Hebei
+14	CN-11	Beijing
+15	CN-34	Anhui
+16	CN-36	Jiangxi
+17	CN-37	Shandong
+18	CN-41	Henan
+19	CN-43	Hunan
+20	CN-42	Hubei
+21	CN-45	Guangxi
+22	CN-44	Guangdong
+23	CN-46	Hainan
+24	CN-65	Xinjiang
+25	CN-64	Ningxia
+26	CN-63	Qinghai
+27	CN-62	Gansu
+28	CN-61	Shaanxi
+29	CN-23	Heilongjiang
+30	CN-22	Jilin
+31	CN-21	Liaoning
+         **/
+
+        var mapData = {
+            "zhejiang": 298,
+            "shanghai": 200,
+            "jiangsu": 220,
+            "anhui": 540,
+            "hunan": 120,
+            "shandong": 760,
+            "guangxi": 550,
+            "yunnan": 200,
+            "beijing": 120
+        };
+        $("#world-map").vectorMap({
+            map: "cn_mill",
+            backgroundColor: "transparent",
+            regionStyle: {
+                initial: {
+                    "fill": "#e4e4e4",
+                    "fill-opacity": 0.9,
+                    "stroke": "none",
+                    "stroke-width": 0,
+                    "stroke-opacity": 0
+                }
+            },
+            series: {
+                regions: [
+                    {
+                        values: mapData,
+                        scale: ["#1ab394", "#22d6b1"],
+                        normalizeFunction: "polynomial"
+                    }
+                ]
+            },
+        })
+    });
+</script>
+<div id="tooltip" style="position:absolute;display: none;border:1px solid #fdd;padding:2px;background-color: #fee;opacity: 0.80;"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="cdms_scores">
+    <query id="getall">
+        SELECT * FROM cdms_scores limit 10;
+    </query>
+    <query id="getById">
+        <![CDATA[
+        SELECT * FROM cdms_scores WHERE id = ${id}
+        ]]>
+    </query>
+</mapper>

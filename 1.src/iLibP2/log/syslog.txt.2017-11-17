@@ -1,0 +1,118 @@
+2017-11-17 15:58:33,851 ERROR iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+2017-11-17 15:58:33,851 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 36, in __init__
+    self.__getDbConn()
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 64, in __getDbConn
+    raise Exception,msg
+Exception: iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+,[数据]:
+iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+2017-11-17 15:58:50,388 ERROR iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+2017-11-17 15:58:50,388 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 36, in __init__
+    self.__getDbConn()
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 64, in __getDbConn
+    raise Exception,msg
+Exception: iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+,[数据]:
+iSQL执行__getDbConn函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 60, in __getDbConn
+    self.db[ds.attrib['name']] =  web.database(**dbargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1143, in database
+    return _databases[dbn](**params)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 1113, in __init__
+    import cx_Oracle as db
+ImportError: No module named cx_Oracle
+,[数据]:
+No module named cx_Oracle
+2017-11-17 15:59:46,006 ERROR iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 74, in __getSQLs
+    mp_root = ET.parse(TP_PATH+"/"+mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+2017-11-17 15:59:46,006 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 38, in __init__
+    self.__getSQLs()
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 81, in __getSQLs
+    raise Exception,msg
+Exception: iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 74, in __getSQLs
+    mp_root = ET.parse(TP_PATH+"/"+mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+,[数据]:
+iSQL执行__getSQLs函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 74, in __getSQLs
+    mp_root = ET.parse(TP_PATH+"/"+mpfile)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'D:/projecting/Lutra_SEMS/0.SRC/iLibP2/modelhelper.xml'
+2017-11-17 16:10:47,262 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "D:/projecting/Lutra_SEMS/0.SRC/iLibP2/isql.py", line 34, in __init__
+    self.__root     = ET.parse(TP_PATH+"/"+sqlmapconfig)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 22] invalid mode ('rb') or filename: 'D:/projecting/Lutra_SEMS/0.SRC/D:/projecting/Lutra_SEMS/0.SRC/isqlconfig.xml'
+,[数据]:
+[Errno 22] invalid mode ('rb') or filename: 'D:/projecting/Lutra_SEMS/0.SRC/D:/projecting/Lutra_SEMS/0.SRC/isqlconfig.xml'

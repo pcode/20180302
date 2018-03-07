@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="/static/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/style.min.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/static/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="/static/js/vue.min.js"></script>
+    <script src="/static/js/plugins/layer/layer.min.js"></script>
+
+    <script>
+        var vm_s = null;
+        function init_vm(){
+            vm_s = new Vue({
+                el: "#searchM",
+                data: {roomno: ''},
+            });
+        }
+        $(function(){
+            init_vm();
+            t = $('#datas').DataTable({
+            aLengthMenu:[50],
+            "bLengthChange": false,
+            searching:false,
+            serverSide: true,
+            ajax:{
+                url:"/F0011/ajax",
+                type: 'POST',data:function(d){
+                    d.roomno = vm_s.roomno;
+                }
+            },
+            language: {url: '/static/zh_cn.json'},
+            "bSort": false,
+            "columns": [
+                { "data": "roomno" },
+                { "data": "the_date" },
+                { "data": "time1" },
+                { "data": "time2" },
+                { "data": "applyuser" },
+                { "data": "phoneno" },
+                { "data": "the_memo" },
+                { render:function(data, type, row){
+                    return "<a href='javascript:doedit("+row.id+")'>编辑</a> "+"<a href='javascript:dodel("+row.id+")'>删除</a>";
+                }}
+            ]
+        });
+
+      });
+        function refresh(){
+            console.log(vm_s.roomno);
+            t.ajax.reload();
+        }
+
+       function doedit(id){
+            rows = t.data();
+            layer.open({
+              type: 2,
+              title: '修改',
+              shadeClose: true,
+              shade: false,
+              maxmin: true, //开启最大化最小化按钮
+              area: ['640px', '800px'],
+              content: '/F0012/list?id='+id
+            });
+        }
+        function dodel(id){
+            $.post("/F0011/ajax",{"cmd":"del","id":id},function(r){
+                console.log(r);
+                t.ajax.reload();
+            },"json")
+        }
+    </script>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>会议室预约记录 <small></small></h5>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row m-b-sm m-t-sm">
+                            <div class="col-md-1">
+                                <!--<button type="button" onclick="dosearch3()" class="btn btn-white btn-sm">近三天</button>-->
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-group" id="searchM">
+                                    <select class="input-sm form-control" id="s_funclass" v-model="roomno">
+                                        <option value="">请选择</option>
+                                        <option>T400</option>
+                                        <option>T403</option>
+                                        <option>J515</option>
+                                        <option>C616</option>
+                                    </select>
+                                   <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="refresh()"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <table id="datas" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>教室</th>
+                                    <th>使用日期</th>
+                                    <th>开始时刻</th>
+                                    <th>结束时刻</th>
+                                    <th>用途</th>
+                                    <th>预约人</th>
+                                    <th>联系电话</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

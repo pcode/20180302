@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <link href="/static/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/style.min.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/static/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="/static/js/vue.min.js"></script>
+    <script src="/static/js/laydate/laydate.js"></script>
+    <script>
+        var vm = null;
+        function formcheck() {
+            var regBox = {
+                regApply: /^[a-z0-9_-\u4E00-\u9FA5]{3,500}$/,//用途
+                regMobile: /^0?1[3|4|5|8][0-9]\d{8}$/,//手机
+                regTel: /^[\d]{6}$/,
+                regName: /^[\u4E00-\u9FA5]{2,5}$/
+            };
+            if (vm.row.the_memo == "" || vm.row.username == "" || vm.row.phoneno == "") {
+                alert('还有内容没填完哦！');
+                return false;
+            }
+
+            if (vm.row.the_memo.length < 5) {
+                alert('用途不够详细');
+                return false;
+            }
+
+            if (!regBox.regName.test(vm.row.applyuser)) {
+                alert("姓名好好填！");
+                return false;
+            }
+
+            var mflag = regBox.regMobile.test(vm.row.phoneno);
+            var tflag = regBox.regTel.test(vm.row.phoneno);
+
+            if (!(mflag || tflag)) {
+                alert("长号或者短号有误！");
+                return false;
+            }
+
+            var strhour = parseFloat(vm.row.starthour);
+            var strmin = parseFloat(vm.row.startmin);
+            var endhour = parseFloat(vm.row.endhour);
+            var endmin = parseFloat(vm.row.endmin);
+
+            if ((strhour * 60 + strmin) >= (endhour * 60 + endmin)) {
+                alert('你输入的时间段不合理');
+                return false;
+            }
+            if ((endhour * 60 + endmin) - (strhour * 60 + strmin) < 10) {
+                alert('使用时间是不是太短了');
+                return false;
+            }
+            return true;
+        }
+        var the_row = {
+                        id          : '${i.get("id",0)}',
+                        cmd         : '${i.get("cmd","add")}',
+                        roomno      : '${i.get("roomno","")}',
+                        the_date    : '${i.get("the_date","")}',
+                        the_memo    : '${i.get("the_memo","")}',
+                        applyuser   : '${i.get("applyuser","")}',
+                        starthour   : '${i.get("starthour","")}',
+                        startmin    : '${i.get("startmin","")}',
+                        endhour     : '${i.get("endhour","")}',
+                        endmin      : '${i.get("endmin","")}',
+                        phoneno     : '${i.get("phoneno","")}'
+        };
+
+        $(function(){
+
+            vm = new Vue({
+                el:"#itemdata",
+                data:{
+                    hours:['08','09','10','11','12','13','14','15','16','17','18','19','20','21','22'],
+                    mins:['00','15','30','45'],
+                    row:the_row
+                },
+                methods:{
+                    dosubmit:function(event){
+                        r = formcheck();
+                        if (r){
+                            console.log(vm.row);
+                            $.post("/F0012/ajax",vm.row,function(r){
+                                if(r.result=="OK"){
+                                    alert("预约成功！");
+                                }
+                            },"json");
+                        }
+
+                    },
+                },
+            });
+            laydate.render({
+                  elem: '#the_date'
+                  ,min: 0 //7天前
+                  ,max: 10 //7天后
+                  ,done: function(value, date, endDate){
+                      vm.row.the_date = value;
+                  }
+                });
+        });
+    </script>
+</head>
+<body class="gray-bg">
+<form id="itemdata" class="form-horizontal">
+    <div class="row animated fadeInRight" style="padding: 0px;">
+
+        <div class="col-xs-12">
+            <div class="ibox-title">
+                <h5>会议室预约<small></small></h5>
+            </div>
+            <div class="ibox-content">
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">会议室：</label>
+                        <div class="col-sm-4">
+                            <select class="input-sm form-control" v-model="row.roomno">
+                                <option value="">请选择</option>
+                                <option>T400</option>
+                                <option>T403</option>
+                                <option>J515</option>
+                                <option>C616</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">预约日期：</label>
+                        <div class="col-sm-5">
+                            <input v-model="row.the_date" id="the_date">
+                            {{row.note}}
+                            <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 预约时间最多提前10天</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">时间选择：</label>
+                        <div class="col-sm-5">
+                            <select v-model="row.starthour" style="width: 60px;height: 30px">
+                                <option v-for="hour in hours">{{hour}}</option>
+                            </select>:
+                            <select v-model="row.startmin" style="width: 60px;height: 30px">
+                                <option v-for="min in mins">{{min}}</option>
+                            </select> 到
+                            <select v-model="row.endhour" style="width: 60px;height: 30px">
+                                <option v-for="hour in hours">{{hour}}</option>
+                            </select>:
+                            <select v-model="row.endmin" style="width: 60px;height: 30px" >
+                                <option v-for="min in mins">{{min}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">会议室用途：</label>
+                        <div class="col-sm-5"><textarea v-model="row.the_memo" class="form-control" style="height: 120px;"></textarea>
+                            <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 不少于5个字</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">联系人：</label>
+                        <div class="col-sm-5">
+                            <table class="table table-bordered table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>项目</th>
+                                    <th>内容</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>姓名</td>
+                                    <td><input v-model="row.applyuser" class="form-control"></td>
+                                </tr>
+                                <tr>
+                                    <td>联系电话</td>
+                                    <td><input v-model="row.phoneno" class="form-control"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="ibox-content">
+                <center><a class="btn btn-primary" v-on:click="dosubmit">提交</a></center>
+            </div>
+        </div>
+        <!--<div class="col-xs-4">-->
+            <!--<pre>{{row}}</pre>-->
+
+        <!--</div>-->
+
+    </div>
+</form>
+</body>
+</html>

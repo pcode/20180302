@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>中量大教务处微信服务平台</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body ontouchstart class="user-body">
+<header class='user-header'>
+    <div class="weui-cell">
+        <div class="weui-cell__hd user-avatar">
+            <img src="">
+        </div>
+        <div class="weui-cell__bd">
+            <p class="user-name">${i.cu.get('nickname','')}</p>
+            <p class="user-edit"><a href="/F9901" class="user-edit"> 修改保密邮箱</a></p>
+        </div>
+        <div class="weui-cell__ft">
+        </div>
+    </div>
+</header>
+<div class="page__bd">
+    <div class="weui-panel weui-panel_access">
+        <div class="user-cell">
+            <a class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd">功能</div>
+            </a>
+        </div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box user-icon">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <a href="/F9912">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/schedule.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            课表
+                        </p>
+                        </a>
+                    </div>
+
+                    <div class="weui-flex__item">
+                        <a href="/F9914">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/exam.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            考试
+                        </p>
+                        </a>
+                    </div>
+
+                    <div class="weui-flex__item">
+                        <a href="/F9913">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/score.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            成绩
+                        </p>
+                        </a>
+                    </div>
+
+                    <div class="weui-flex__item">
+                        <a href="/F9902">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/classroom.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            空教室
+                        </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">今日课程</div>
+    <div class="weui-panel__bd" id="kcb">
+        <img src="/static/images/loading-0.gif">
+    </div>
+</div>
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">今日考试</div>
+        <div class="weui-panel__bd" id="ks">
+        <img src="/static/images/loading-0.gif">
+        </div>
+    </div>
+
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">发现</div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box user-icon">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <a href="/F9918">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/historyscore.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            历年成绩
+                        </p>
+                        <p class="weui-grid__mate">
+                            历年成绩
+                        </p>
+                            </a>
+                    </div>
+                    <div class="weui-flex__item">
+                        <a href="/F9905">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/pwd.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            重置教务密码
+                        </p>
+                        <p class="weui-grid__mate">
+                         登录教务网的密码忘记了可以试试
+                        </p>
+                        </a>
+                    </div>
+                    <div class="weui-flex__item">
+                        <a href="/F9917">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/exam1.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            补考
+                        </p>
+
+                        <p class="weui-grid__mate">
+                            补考的安排
+                        </p>
+                            </a>
+                    </div>
+                    <div class="weui-flex__item">
+                        <a href="/F9903">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/school-schedule.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            校历
+                        </p>
+
+                        <p class="weui-grid__mate">
+                            看看那天放假
+                        </p>
+                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-media-box user-icon">
+                <div class="weui-flex">
+                    <div class="weui-flex__item">
+                        <a href="/F9919">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/makeup.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            等级考试成绩
+                        </p>
+                        <p class="weui-grid__mate">
+                            历年成绩查询
+                        </p>
+                        </a>
+                    </div>
+                    <div class="weui-flex__item">
+                        <a href="/F9931">
+                            <div class="weui-grid__icon">
+                                <img src="/static/icons/sports.png" alt="">
+                            </div>
+                            <p class="weui-grid__label">
+                                体测成绩
+                            </p>
+
+                            <p class="weui-grid__mate">
+                                历年体侧结果
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="weui-flex__item">
+                        <a href="/F9904">
+                        <div class="weui-grid__icon">
+                            <img src="/static/icons/contacts.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            联系老师
+                        </p>
+
+                        <p class="weui-grid__mate">
+                            找老师电话
+                        </p>
+                            </a>
+                    </div>
+                    <div class="weui-flex__item">
+                        <a href="http://jwc.cjlu.edu.cn">
+                            <div class="weui-grid__icon">
+                                <img src="/static/icons/icon_tz.jpg" alt="">
+                            </div>
+                            <p class="weui-grid__label">
+                                教务网
+                            </p>
+                            <p class="weui-grid__mate">
+                                官方的通知可以在这里查询
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="weui-footer">
+  <p class="weui-footer__text">
+    Powered by youliaoo.com 授权中国计量大学永久免费使用
+  </p>
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+<script>
+    $(function () {
+        FastClick.attach(document.body);
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="favicon.ico">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/style.min.css" rel="stylesheet">
+    <link href="/static/css/select2.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+
+    <script src="/static/js/sugar.min.js"></script>
+    <script src="/static/js/jquerymy.min.js"></script>
+    <script src="/static/js/select2.js"></script>
+    <script src="/static/js/select2_locale_zh-CN.js"></script>
+</head>
+<body>
+<div id="form">
+ <input type="text" id="name" />
+ <input type="range" id="age" />
+    <select multiple id="ss" style="width:300px;">
+        <option>a</option>
+        <option>b</option>
+        <option>c</option>
+        <option>d</option>
+        <option>e</option>
+    </select>
+</div>
+<button onclick="doaction()">测试</button>
+</body>
+<script>
+    var data2={name: "bbb",
+             age: 11,
+             ss:['b','c']};
+    //初始值
+    var data = {
+             name: "Luke Skywalker",
+             age: 12,
+             ss:[]
+    };
+    var data1 = {
+      name:"测试一下",
+      age:14,
+      ss:['b','c','d','e']
+    };
+    function doaction(){
+        $("#form").my("data",data1);
+        $("#ss").trigger("change");
+    }
+    $(function(){
+
+        $("#form").my({
+            changed:function(e){
+                console.log(e);
+            },
+            ui:{
+                "#name": "name",
+                "#age": "age",
+                "#ss":'ss'
+        }}, data);
+        $("#ss").select2();
+    });
+</script>
+</html>

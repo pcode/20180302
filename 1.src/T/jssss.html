@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta name="description" content="powered by youliaoo.com pcode@qq.com">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" >
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/bootstrap-table/bootstrap-table.min.css" />
+        <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.css" >
+        <link rel="stylesheet" type="text/css" href="/static/css/plugins/iCheck/custom.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/plugins/iCheck/custom.css"/>
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/static/bootstrap/bootstrap-table/bootstrap-table.min.js"></script>
+        <script src="/static/bootstrap/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+        <script src="/static/js/jquery.serializejson.min.js"></script>
+        <script src="/static/js/plugins/iCheck/icheck.min.js"></script>
+        <script src="/static/js/plugins/layer/layer.min.js"></script>
+        <script src="/static/js/laydate/laydate.js"></script>
+    </head>
+    <body class="container-fluid" style="padding: 10px;">
+    <table class="table table-bordered table-responsive">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            %for thexn in i.xns:
+            <th> ${thexn}</th>
+            %endfor
+        </tr>
+        </thead>
+        <tbody>
+        %for js in i.jss:
+        <tr>
+            <td>[${js.jszgh}]${js.jsxm}</td>
+            %for thexn in i.xns:
+            <td> ${jsf(js.jszgh,thexn)}</td>
+            %endfor
+        </tr>
+        %endfor
+        </tbody>
+    </table>
+    </body>
+
+</html>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="modelhelper">
+    <!--获取列信息-->
+    <query id="getColsComments">
+     <![CDATA[
+        select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='${tablename}' and table_schema='${dbname}'
+     ]]>
+    </query>
+    <!--数据表模型-->
+    <query id="model">
+     <![CDATA[
+        <%text>#encoding=utf-8</%text>
+        __author__ = 'jy@cjlu.edu.cn'
+        # ${functionmemo}
+        from iLibP.dalbase import DalBase
+        class ${tablename}(DalBase):
+            fields = {
+                        %for r in recs:
+                            %if r.colname!='id':
+                            u'${r.colcomment}':'${r.colname}',
+                            %endif
+                        %endfor
+                        }
+            def __init__(self):
+                DalBase.__init__(self,'${tablename}','id',fields)
+            #额外函数请自行定义
+            <%text>
+            def DataFilter(self,i):
+                """
+                用于过滤数据，给出最终的数据列表，每个元素都是一个storage
+                返回的数据放置在i的recs里
+                """
+                #补充其他查询条件
+            </%text>
+                %for rec in recs:
+                i.${rec.colname}  = i.get('${rec.colname}','')
+                %endfor
+                #初始化结果
+                i.recs      = []
+                strwhere    = " id>0 "
+                %for rec in recs:
+                #${rec.colcomment}查询
+                if i.get('${rec.colname}',None):
+                    strwhere+=" and ${rec.colname} like '%"+safewhere(i.${rec.colname})+"%'"
+                %endfor
+            <%text>
+                i.pageindex = int(i.get("pageindex", 1))
+                i.pagesize  = int(i.get("pagesize", 15))
+                recs, i.recordercount, i.pagecount = self.GetPagedRowsByDbWhere(pageindex=i.pageindex-1,pagesize=i.pagesize,where=strwhere ,order=" id asc")
+                i.recs      = recs.list()
+                return i
+            </%text>
+            def doimport(self,fn):
+                """
+                导入函数
+                """
+                result          = parseXls(opt_obj.field_definition,fn)
+                importresult    = []
+                dbt             = opt_obj.Transaction()
+                try:
+                    #导入前处理一个excel的日期补丁或者清理数据
+                    for d in result.data:
+                        #查找部分数据
+                        try:
+                            #修改查询条件
+                            #写入前需要增加重复判断，避免重复写入
+                            d.id=0
+                            #补充其他字段内容
+                            self.Save(d)
+                            d.main_text=u"数据字段主体内容"
+                            d.importstatus=u"【成功】写入"
+                        except Exception,ex1:
+                            print ex1
+                            d.importstatus=u"【失败】数据异常"
+                        importresult.append(d)
+                    opt_obj.Commit(dbt)
+                return result
+
+        if __name__ == '__main__':
+            opt_obj = ${tablename}()
+            #print opt_obj.GetFieldDefs()
+            recs,r1,r2 = opt_obj.GetPagedRowsByDbWhere(0,20)
+            for rec in recs:
+                print rec
+     ]]>
+    </query>
+    <!--功能模块-->
+    <query id="function">
+<![CDATA[
+<%text>#coding=utf-8
+__author__ = 'jy@cjlu.edu.cn'
+import web
+from models.s_userpower import get_currentuser,checkpower
+from iLibP.loger import LogError
+from utils.tools import *
+from utils.excelParser import *
+from server import GLOBAL_LOOKUP as T
+</%text>
+from models.${tablename} import *
+opt_obj=${tablename}()
+#=======================================================================================================================
+#编号:[${fn}]
+#名称:[${functionmemo}]
+#功能:[${functionmemo}]
+#=======================================================================================================================
+
+class AJAX:
+    """
+    获取数据和POST数据用来更新数据
+    """
+    def GET(self):
+        web.header("Content-Type", "application/json; charset=UTF-8")
+        i       = web.input()
+        i       = opt_obj.DataFilter(i)
+        i.total = i.recordercount
+        i.rows  = i.recs
+        return toJson(i)
+
+    def POST(self):
+        web.header("Content-Type", "application/json; charset=UTF-8")
+        i       = web.input()
+        #检查重复
+        rec     = opt_obj.GetRowById(i.id)
+        #存在的话就更新
+        if rec:
+            rec = CopyData_EX(rec,i)
+            opt_obj.Save(rec)
+        else:
+            i.id=0
+            opt_obj.Save(i)
+class List:
+    """
+    用于处理列表页面或默认显示页面
+    对于数据的删除或简单AJAX的操作也放置在此类中，
+    可放置于POST函数内
+    List的GET只处理查询和显示列表等
+    List的POST可以临时响应AJAX等。
+    """
+    #@checkpower("${fn}")
+    def GET(self):
+        web.header("Content-Type", "text/html; charset=UTF-8")
+        t       = T.get_template("${mn}/T/${fn}_list.html")
+        i       = web.input(the_date=time.strftime("%Y-%m-%d"))
+        i.user  = get_currentuser()
+        i       = opt_obj.DataFilter(i)
+        return t.render(i=i)
+"""
+    def POST(self):
+        web.header("Content-Type", "application/json; charset=UTF-8")
+        i           = web.input(cmd='', act='')
+        # 处理就地编辑
+        r           = storage()
+        r.result    = "NOOK"
+        if i.get('cmd', None):
+            if i.cmd == "q":
+                # 处理空值，允许置空
+                if i.value == '':
+                    i.value = None
+                i.name = str(i.name).replace("_" + str(i.pk), '')
+                rv = opt_obj.UpdateColValue(i.pk, i.name, i.value)
+                if i.value == rv:
+                    r.result = "OK"
+        return toJson(r)
+"""
+class Import:
+    def GET(self):
+        web.header("Content-Type", "text/html; charset=UTF-8")
+        i = web.input(the_date=time.strftime("%Y-%m-%d"))
+        #请修改路径
+        t = T.get_template("${mn}/T/${fn}_import.html")
+<%text>
+        return t.render(i=i)
+    def POST(self):
+        web.header("Content-Type", "text/html; charset=UTF-8")
+        #1.导入数据时只做更新操作，特别注意不能删除数据
+
+        i = web.input(excel={})
+        fn= uploadFile()
+        result = parseXls(opt_obj.field_definition,fn)
+        importresult=[]
+        n = datetime.datetime.now()
+        dbt=opt_obj.Transaction()
+        try:
+            #导入前处理一个excel的日期补丁或者清理数据
+            for d in result.data:
+                #查找部分数据
+                try:
+                    #修改查询条件
+                    #写入前需要增加重复判断，避免重复写入
+                    d.id=0
+                    #补充其他字段内容
+                    #d.import_time = n
+                    opt_obj.Save(d)
+                    d.main_text=u"数据字段主体内容"
+                    d.importstatus=u"【成功】写入"
+                except Exception,ex1:
+                    print ex1
+                    d.importstatus=u"【失败】数据异常"
+                importresult.append(d)
+            opt_obj.Commit(dbt)
+            #导入完成后更新以下导入的状态
+</%text>
+            t=T.get_template("${mn}/T/${fn}_importresult.html")
+<%text>
+            return t.render(datas=importresult)
+        except Exception,ex:
+            msg=u"iLib执行Save函数出错,[具体信息]:"+str(ex)
+            LogError(msg)
+            opt_obj.RollBack(dbt)
+            raise Exception,msg
+class Export:
+    """
+    用于将数据导出向EXCEL
+    """
+    def GET(self):
+        web.header("Content-Type", "application/json; charset=UTF-8")
+        i=web.input()
+        from SysCommon.exceloperator import ExcelOperator
+        excelobj=ExcelOperator()
+</%text>
+        wb,ws=excelobj.openExistExcel(TP_PATH+"/static/T/${fn}.xls")
+        start_row=1
+
+        #1.获取数据
+        datas=opt_obj.GetRowsByDbWhere()
+
+        #2.组合excel<% j=0 %>
+        for d in datas:
+            %for rec in recs:
+            ws.write(start_row,${j},d.${rec.colname})<% j+=1%>
+            %endfor
+            start_row+=1
+
+        #3.输出excel
+        nfilename="/static/tmpfiles/${fn}.xls"
+        wb.save(TP_PATH+nfilename)
+        r = storage()
+        r.result = nfilename
+        return toJson(r)
+        ]]>
+    </query>
+    <query id="list">
+        <![CDATA[
+<%text><!--增加过滤器解决恶意html及None问题-->
+<%!
+def ESC_BLANK(text):
+    if text=="None":
+        return ""
+    else:
+        return text
+%>
+<%page expression_filter="h,ESC_BLANK"/>
+</%text>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>奥品街</title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/select.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.idTabs.min.js"></script>
+    <script type="text/javascript" src="/static/js/select-ui.min.js"></script>
+    <!--就地编辑-->
+    <!-- select2 美化select用的组件-->
+    <link href="/static/jquery-editable-1.5.1/css/select2.css" rel="stylesheet">
+    <script src="/static/jquery-editable-1.5.1/js/select2.js"></script>
+    <!-- poshytip 提示框组件 选择popup时必须有这个组件-->
+    <link href="/static/jquery-editable-1.5.1/css/tip-yellowsimple.css" rel="stylesheet">
+    <script src="/static/jquery-editable-1.5.1/js/jquery.poshytip.js"></script>
+    <!-- x-editable (jquery) -->
+    <link href="/static/jquery-editable-1.5.1/css/jquery-editable.css" rel="stylesheet">
+    <script src="/static/jquery-editable-1.5.1/js/jquery-editable-poshytip.js"></script>
+    <!--就地编辑结束-->
+    <script>
+        $(document).ready(function() {
+            $("#usual1 ul").idTabs();
+            $('.tablelist tbody tr:odd').addClass('odd');
+            $(".opt").hide();
+            $.fn.editable.defaults.url = '/${fn}/list';
+            $('.editable1').editable({
+                type:'text',
+                inputclass: 'width80',     //设定宽度
+                showbuttons:false,
+                toggle:'click',
+                mode:'popup',
+                params:{cmd:'q'},
+                emptytext:'待定',
+               success: function(response, newValue) {
+                if(response.result != 'OK'){ return "更新失败"; }
+                }
+            });
+    });
+        </script>
+</head>
+<body>
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">系统</a></li>
+        <li><a href="/${fn}">${functionmemo}</a></li>
+    </ul>
+</div>
+<div class="formbody">
+    <div id="usual1" class="usual">
+        <div class="itab">
+            <ul>
+                <li><a href="#tab1" class="selected">数据列表</a></li>
+                <li><a href="#tab2">新增</a></li>
+            </ul>
+        </div>
+        <div id="tab1" class="tabson">
+            <ul class="toolbar1">
+                <li><a href="/${fn}/import"  style="cursor:hand"><span><img src="../static/images/t06.png" /></span>导入</a></li>
+                <li><a href="/${fn}/export"  style="cursor:hand"><span><img src="../static/images/t07.png" /></span>导出</a></li>
+            </ul>
+            <ul class="seachform">
+                %for rec in recs:
+                <li><label>${rec.colcomment}</label><input id="${rec.colname}" name="${rec.colname}" type="text" class="scinput" value="<%text>${get('</%text>${rec.colname}<%text>','')}</%text>"/></li>
+                %endfor
+                <li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询" onclick="dosearch()"/></li>
+            </ul>
+            <table class="tablelist">
+                <thead>
+                <tr>
+                    %for rec in recs:
+                    <th>${rec.colcomment}</th>
+                    %endfor
+                    <th colspan="4">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%text>
+                %for rec in i.recs:
+                </%text>
+                <tr>
+                    %for rec in recs:
+                    <td><%text>${rec.</%text>${rec.colname}}</td>
+                    %endfor
+                    <td width="40"><a href="/${fn}/update?act=edit&id=<%text>${rec.id}</%text>" class="tablelink" title="点击修订"><img src="/static/images/edit-01.png" alt="" width="24" height="24"/></a> </td>
+                    <td width="40"><a href="/${fn}/update?act=del&id=<%text>${rec.id}</%text>" class="tablelink" title="点击删除" onClick="return confirm('确定删除?');"><img src="/static/images/del-01.png" alt="" width="24" height="24"/></a></td>
+                </tr>
+                <%text>
+                    %endfor
+                </%text>
+                </tbody>
+            </table>
+            <%text><%include  file="pager.html"/></%text>
+        </div>
+        <div id="tab2" class="tabson">
+            <div class="formtext">请管理使用此功能，其他人员<b>慎用！</b></div>
+            <form action="/${fn}/update" id="dataform" method="post">
+            <ul class="forminfo">
+                %for rec in recs:
+                <li><label>${rec.colcomment}<b>*</b></label><input name="${rec.colname}" type="text" class="dfinput" style="width:518px;"/></li>
+                %endfor
+            <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="保存"/></li>
+            </ul>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function dosearch(){
+            url=changeURLArg(url,'pageindex',1);
+            %for rec in recs:
+            url=changeURLArg(url,'${rec.colname}',$("#${rec.colname}").val());
+            %endfor
+            location.href=url
+        }
+    </script>
+</div>
+
+
+</body>
+</html>]]>
+    </query>
+    <query id="update">
+    </query>
+    <query id="import">
+
+    </query>
+    <query id="importresult">
+
+    </query>
+</mapper>

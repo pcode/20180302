@@ -1,0 +1,52 @@
+2017-12-01 15:55:07,051 INFO SQL>
+2017-12-01 15:56:00,523 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='d_userbinding' and table_schema='lutra_sems'
+2017-12-01 15:56:01,553 ERROR iSQL执行renderTemplate函数出错,[具体信息]:Traceback (most recent call last):
+  File "D:\projecting\Lutra_SEMS\0.SRC\iLibP2\isql.py", line 116, in doQuery
+    return self.db[conn_name].query(sqlstr)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 643, in query
+    db_cursor = self._db_cursor()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 566, in _db_cursor
+    return self.ctx.db.cursor()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 507, in _getctx
+    self._load_context(self._ctx)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 516, in _load_context
+    ctx.db = self._connect_with_pooling(self.keywords)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\web\db.py", line 563, in _connect_with_pooling
+    return self._pooleddb.connection()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\DBUtils\PooledDB.py", line 331, in connection
+    con = self.steady_connection()
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\DBUtils\PooledDB.py", line 279, in steady_connection
+    *self._args, **self._kwargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\DBUtils\SteadyDB.py", line 134, in connect
+    failures, ping, closeable, *args, **kwargs)
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\DBUtils\SteadyDB.py", line 186, in __init__
+    self._store(self._create())
+  File "C:\Users\Administrator\AppData\Roaming\Python\Python27\site-packages\DBUtils\SteadyDB.py", line 190, in _create
+    con = self._creator(*self._args, **self._kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\MySQLdb\connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+,[数据]:
+(2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+2017-12-01 15:56:40,288 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='d_userbinding' and table_schema='lutra_sems'
+2017-12-01 15:57:20,085 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='d_userbinding' and table_schema='lutra_sems'
+2017-12-01 15:59:15,151 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='d_userbinding' and table_schema='lutra_sems'
+2017-12-01 16:40:11,836 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='s_user' and table_schema='lutra_sems'
+2017-12-01 16:41:59,184 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='s_users' and table_schema='lutra_sems'
+2017-12-01 17:01:35,065 INFO SQL>select column_name colname,column_comment colcomment
+        from INFORMATION_SCHEMA.Columns
+        where table_name='s_users' and table_schema='lutra_sems'

@@ -1,0 +1,10 @@
+2018-03-06 11:15:46,039 ERROR iSQL初始化出错,[具体信息]:Traceback (most recent call last):
+  File "D:\projecting\lx_room\1.src\iLibP2\isql.py", line 34, in __init__
+    self.__root     = ET.parse(TP_PATH+"/"+sqlmapconfig)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 1177, in parse
+    tree.parse(source, parser)
+  File "C:\Python27\lib\xml\etree\ElementTree.py", line 646, in parse
+    source = open(source, "rb")
+IOError: [Errno 2] No such file or directory: 'D:\\projecting\\lx_room\\1.src\\models/isqlconfig.xml'
+,[数据]:
+[Errno 2] No such file or directory: 'D:\\projecting\\lx_room\\1.src\\models/isqlconfig.xml'
