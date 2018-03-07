@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>中量大教务处微信服务平台</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Data Tables -->
-    <link href="/static/css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="/static/css/animate.min.css" rel="stylesheet">
-    <link href="/static/css/style.min.css" rel="stylesheet">
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="/static/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-    <script src="/static/js/vue.min.js"></script>
-    <script src="/static/js/laydate/laydate.js"></script>
-    <script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/wxcss.css" rel="stylesheet">
+</head>
+<body ontouchstart class="user-body">
+<form id="itemdata" class="form-horizontal">
+    <div class="page__bd">
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__hd">
+            <label class="weui-label">会议室：</label>
+        </div>
+        <div class="weui-cell__bd">
+            <select class="weui-input">
+                <option value="">请选择会议室</option>
+                <option>T400</option>
+                <option>T403</option>
+                <option>J515</option>
+                <option>C616</option>
+            </select>
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="" class="weui-label">日期</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="date" value="">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="" class="weui-label">时间</label></div>
+        <div class="weui-cell__bd">
+            <div class="weui-cell"><input class="weui-input" type="time" value="" placeholder="开始时间">~<input class="weui-input" type="time" value="" placeholder="结束时间"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="weui-cells__title">借用理由</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+          <div class="weui-textarea-counter"><span>0</span>/200</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="weui-cells__tips"><pre>预约说明:预约时间最多提前10天
+钥匙领取:格中418-1 柳老师
+电话: 15267173532 (673532)
+请提前10-20分钟领取钥匙,如有改变请电话确认。</pre>
+    </div>
+    <div class="weui-cells__title">表单报错</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell weui-cell_warn">
+        <div class="weui-cell__hd"><label for="" class="weui-label">卡号</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" pattern="[0-9]*" value="weui input error" placeholder="请输入卡号">
+        </div>
+        <div class="weui-cell__ft">
+          <i class="weui-icon-warn"></i>
+        </div>
+      </div>
+    </div>
+
+</form>
+</body>
+<script>
         var vm = null;
         function formcheck() {
             var regBox = {
@@ -111,95 +165,4 @@
                 });
         });
     </script>
-</head>
-<body class="gray-bg">
-<form id="itemdata" class="form-horizontal">
-    <div class="row animated fadeInRight" style="padding: 0px;">
-
-        <div class="col-xs-12">
-            <div class="ibox-title">
-                <h5>会议室预约<small></small></h5>
-            </div>
-            <div class="ibox-content">
-
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">会议室：</label>
-                        <div class="col-sm-4">
-                            <select class="input-sm form-control" v-model="row.roomno">
-                                <option value="">请选择</option>
-                                <option>T400</option>
-                                <option>T403</option>
-                                <option>J515</option>
-                                <option>C616</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">预约日期：</label>
-                        <div class="col-sm-5">
-                            <input v-model="row.the_date" id="the_date">
-                            {{row.note}}
-                            <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 预约时间最多提前10天</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">时间选择：</label>
-                        <div class="col-sm-5">
-                            <select v-model="row.starthour" style="width: 60px;height: 30px">
-                                <option v-for="hour in hours">{{hour}}</option>
-                            </select>:
-                            <select v-model="row.startmin" style="width: 60px;height: 30px">
-                                <option v-for="min in mins">{{min}}</option>
-                            </select> 到
-                            <select v-model="row.endhour" style="width: 60px;height: 30px">
-                                <option v-for="hour in hours">{{hour}}</option>
-                            </select>:
-                            <select v-model="row.endmin" style="width: 60px;height: 30px" >
-                                <option v-for="min in mins">{{min}}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">会议室用途：</label>
-                        <div class="col-sm-5"><textarea v-model="row.the_memo" class="form-control" style="height: 120px;"></textarea>
-                            <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 不少于5个字</span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">联系人：</label>
-                        <div class="col-sm-5">
-                            <table class="table table-bordered table-responsive">
-                                <thead>
-                                <tr>
-                                    <th>项目</th>
-                                    <th>内容</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>姓名</td>
-                                    <td><input v-model="row.applyuser" class="form-control"></td>
-                                </tr>
-                                <tr>
-                                    <td>联系电话</td>
-                                    <td><input v-model="row.phoneno" class="form-control"></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-            </div>
-            <div class="ibox-content">
-                <center><a class="btn btn-primary" v-on:click="dosubmit">提交</a></center>
-            </div>
-        </div>
-        <!--<div class="col-xs-4">-->
-            <!--<pre>{{row}}</pre>-->
-
-        <!--</div>-->
-
-    </div>
-</form>
-</body>
 </html>
