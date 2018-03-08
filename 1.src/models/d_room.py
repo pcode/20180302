@@ -22,4 +22,33 @@ class d_room(DalBase):
     }
     def __init__(self):
         DalBase.__init__(self,"d_room","id",self.fields)
+    def getInfos(self,roomno,days):
+        """
+        获取未来几天的借用情况
+        :param roomno:
+        :param days:
+        :return:
+        """
+        result=[]
+        try:
+            result = self.GetRowsByDbWhere(
+                                            where= " the_date BETWEEN CURDATE() and ADDDATE(CURDATE(),INTERVAL $days DAY) and roomno=$roomno",
+                                            vars={"days":days,"roomno":roomno}
+                                           )
+            result=result.list()
+        except:
+            pass
+        return result
+
+    def getPassedInfos(self,roomno,days):
+        """
+        获取近几天的借用情况
+        :param roomno:
+        :param days:
+        :return:
+        """
+        pass
 opt_room = d_room()
+if __name__ == '__main__':
+    recs = opt_room.getInfos('T400',3)
+    print recs

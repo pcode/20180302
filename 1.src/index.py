@@ -5,6 +5,7 @@ __author__ = 'pcode@qq.com'
 from iLibP2.baseView import BaseView
 from models.s_userpower import *
 from web.utils import storage
+from models.d_room import opt_room
 class Index(BaseView):
     """
     入口页面
@@ -12,6 +13,12 @@ class Index(BaseView):
     def GET(self):
         web.header("Content-Type", "text/html; charset=UTF-8")
         i = web.input()
+        # 计算近三天日期
+        i.recsT400 = opt_room.getInfos("T400",3)
+        i.recsT403 = opt_room.getInfos("T403", 3)
+        i.recsJ515 = opt_room.getInfos("J515", 3)
+        i.recsC616 = opt_room.getInfos("C616", 3)
+        #计算近三天的借用记录
         return self.display("T/index.html", i=i)
 class Logout:
     def GET(self):

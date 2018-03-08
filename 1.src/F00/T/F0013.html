@@ -69,22 +69,11 @@
       </div>
     </div>
     </div>
-    <div class="weui-cells__tips"><pre>预约说明:预约时间最多提前10天
-钥匙领取:格中418-1 柳老师
-电话: 15267173532 (673532)
-请提前10-20分钟领取钥匙,如有改变请电话确认。</pre>
+    <div class="weui-cells__tips">
         <div class="weui-flex">
-  <div class="weui-flex__item"><a href="javascript:;" v-on:click="dosubmit" class="weui-btn weui-btn_primary" style="width: 200px;">预约</a></div>
-  <div class="weui-flex__item"><a href="javascript:;" onclick="history.go(-1)" class="weui-btn weui-btn_default" style="width: 100px;">取消</a></div>
-</div>
-
-
+          <div class="weui-flex__item"><a href="javascript:;" v-on:click="dosubmit" class="weui-btn weui-btn_primary" style="width: 200px;">修改</a></div>
+        </div>
     </div>
-    <div class="weui-footer">
-  <p class="weui-footer__text">
-    Powered by youliaoo.com 理学院
-  </p>
-</div>
 </form>
 <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
@@ -171,12 +160,11 @@
                         r = formcheck();
                         if (r){
                             console.log(vm.row);
-                            $.post("/F0012/ajax",vm.row,function(r){
+                            $.post("/F0013/ajax",vm.row,function(r){
                                 if(r.result=="OK"){
-                                    $.alert("预订成功！钥匙领取:格中418-1 柳老师\n" +
-                                        "电话: 15267173532 (673532)\n" +
-                                        "请提前10-20分钟领取钥匙,如有改变请电话确认。", function() {
-                                        window.location.href= "/";
+                                    $.alert("修改成功！", function() {
+                                        parent.refresh();
+                                        parent.layer.closeAll();
                                     });
                                 }
                             },"json");

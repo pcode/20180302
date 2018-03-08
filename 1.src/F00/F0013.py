@@ -19,7 +19,7 @@ class Ajax:
         """
         web.header("Content-Type", "application/json; charset=UTF-8")
         i = web.input(cmd="ajax")
-        if i.cmd == "add":
+        if i.cmd == "edit":
             i.applytime = datetime.datetime.now()
             opt_obj.Save(i)
         return JsonResult("OK")
@@ -39,4 +39,4 @@ class List(BaseView):
             i.startmin      = i.time1.split(":")[1]
             i.endhour       = i.time2.split(":")[0]
             i.endmin        = i.time2.split(":")[1]
-        return self.display("F00/T/F0012.html",i=i)
+        return self.display("F00/T/F0013.html",i=i)

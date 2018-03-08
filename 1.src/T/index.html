@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>中量大教务处微信服务平台</title>
+    <title>理学院会议室预约系统</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -24,13 +24,13 @@
     </div>
 </header>
 <div class="page__bd">
-        <div class="weui-panel weui-panel_access">
-        <div class="weui-panel__hd">发现</div>
+    <div class="weui-panel weui-panel_access">
+        <div class="weui-panel__hd">功能</div>
         <div class="weui-panel__bd">
             <div class="weui-media-box user-icon">
                 <div class="weui-flex">
                     <div class="weui-flex__item">
-                        <a href="/F9918">
+                        <a href="javascript:;" onclick="fun1()">
                         <div class="weui-grid__icon">
                             <img src="/static/images/1.png" alt="">
                         </div>
@@ -39,7 +39,7 @@
                         </p></a>
                     </div>
                     <div class="weui-flex__item">
-                        <a href="/F9905">
+                        <a href="javascript:;" onclick="fun2()">
                         <div class="weui-grid__icon">
                             <img src="/static/images/2.png" alt="">
                         </div>
@@ -50,17 +50,7 @@
                         </a>
                     </div>
                     <div class="weui-flex__item">
-                        <a href="/F9917">
-                        <div class="weui-grid__icon">
-                            <img src="/static/images/3.png" alt="">
-                        </div>
-                        <p class="weui-grid__label">
-                            会议室查询
-                        </p>
-                            </a>
-                    </div>
-                    <div class="weui-flex__item">
-                        <a href="/F9903">
+                        <a href="/F0012/list">
                         <div class="weui-grid__icon">
                             <img src="/static/images/4.png" alt="">
                         </div>
@@ -69,54 +59,70 @@
                         </p>
                             </a>
                     </div>
-                </div>
-            </div>
-            <div class="weui-media-box user-icon">
-                <div class="weui-flex">
                     <div class="weui-flex__item">
-                        <a href="/F9919">
+                        <a href="javascript:;" onclick="fun3()">
                         <div class="weui-grid__icon">
                             <img src="/static/images/5.png" alt="">
                         </div>
                         <p class="weui-grid__label">
                             答疑解惑
                         </p>
-                        <p class="weui-grid__mate">
-                            如有疑问，请咨询柳靖群老师
-                        </p>
                         </a>
                     </div>
-                    <div class="weui-flex__item">
-
-                    </div>
-
-                    <div class="weui-flex__item">
-
-                    </div>
-                    <div class="weui-flex__item">
-
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-
     <div class="weui-panel weui-panel_access">
+        <!--T400-->
         <div class="weui-panel__hd">T400会议室近三天借用情况</div>
         <div class="weui-panel__bd">
-            <div  class="weui-media-box weui-media-box_appmsg">
-                <table class="table table-bordered table-stripe" style="font-size:12px;">
-                    <tr>
-                        <td>2018-03-07</td>
-                        <td>8:30~9:30</td>
-                        <td>测试</td>
-                        <td>开会使用</td>
-                    </tr>
-                </table>
-            </div>
+                %for rec in i.recsT400:
+              <div class="weui-media-box weui-media-box_text">
+                <h4 class="weui-media-box__title">${rec.the_date} ${rec.time1}~${rec.time2}</h4>
+                <p class="weui-media-box__desc">由${rec.applyuser}预约,预约理由是"${rec.the_memo}"</p>
+              </div>
+                %endfor
         </div>
     </div>
+    <div class="weui-panel weui-panel_access">
+        <!--T403-->
+        <div class="weui-panel__hd">T403会议室近三天借用情况</div>
+        <div class="weui-panel__bd">
+                %for rec in i.recsT403:
+              <div class="weui-media-box weui-media-box_text">
+                <h4 class="weui-media-box__title">${rec.the_date} ${rec.time1}~${rec.time2}</h4>
+                <p class="weui-media-box__desc">由${rec.applyuser}预约,预约理由是"${rec.the_memo}"</p>
+              </div>
+                %endfor
+        </div>
+    </div>
+    <div class="weui-panel weui-panel_access">
+        <!--J515-->
+        <div class="weui-panel__hd">J515会议室近三天借用情况</div>
+        <div class="weui-panel__bd">
+                %for rec in i.recsJ515:
+              <div class="weui-media-box weui-media-box_text">
+                <h4 class="weui-media-box__title">${rec.the_date} ${rec.time1}~${rec.time2}</h4>
+                <p class="weui-media-box__desc">由${rec.applyuser}预约,预约理由是"${rec.the_memo}"</p>
+              </div>
+                %endfor
+        </div>
+    </div>
+    <div class="weui-panel weui-panel_access">
+        <!--TC616-->
+        <div class="weui-panel__hd">C616会议室近三天借用情况</div>
+        <div class="weui-panel__bd">
+                %for rec in i.recsC616:
+              <div class="weui-media-box weui-media-box_text">
+                <h4 class="weui-media-box__title">${rec.the_date} ${rec.time1}~${rec.time2}</h4>
+                <p class="weui-media-box__desc">由${rec.applyuser}预约,预约理由是"${rec.the_memo}"</p>
+              </div>
+                %endfor
+        </div>
+
+    </div>
+
 </div>
 <div class="weui-footer">
   <p class="weui-footer__text">
@@ -130,7 +136,18 @@
     $(function () {
         FastClick.attach(document.body);
     });
+    function fun1(){
+        $.alert("格中400、403、500三个会议室主要用于各部门召开会议、组织活动、学术讨论等。各会议室容量分别为22人、30人、36人。每个会议室、教室配备了多媒体设备，其中400会议室需自备笔记本电脑，其他房间可以直接使用设备。");
+    }
+    function fun2(){
+        $.alert("预约成功后请提前取钥匙，并做好纸质登记（蓝色本子）。登记表中归还时间一栏请在归还钥匙时填写。钥匙借用和归还时间：8:00—11:30，13:30—16:00。 使用会议室本着谁借用、谁负责的原则。请借用会议室的人负责好会议室设备的合理使用，按序开关机，会议结束后负责锁好门窗。使用时注意保持会议室卫生。");
+    }
+    function fun3(){
 
+        $.alert("<p>办公室：格致中楼418-1</p>" +
+            "<p>长     号：15267173532</p>" +
+            "<p>短     号：673532</p>");
+    }
 </script>
 
 </body>
